@@ -1,10 +1,4 @@
-.vagrant
-Berksfile.lock
-Gemfile.lock
-*~
-*#
-.#*
-\#*#
-.*.sw[a-z]
-*.un~
-/cookbooks
+*.DS_Store
+.bundle/
+.vagrant/
+/.idea/workspace.xml
