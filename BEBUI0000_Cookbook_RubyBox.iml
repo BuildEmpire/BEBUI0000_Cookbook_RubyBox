@@ -2,13 +2,13 @@
 <module type="RUBY_MODULE" version="4">
   <component name="CompassSettings">
     <option name="compassExecutableFilePath" value="$USER_HOME$/.IntelliJIdea13/system/ruby_stubs/-2068710267/-1058366402/gems/compass-0.12.2/bin/compass" />
+    <option name="compassSupportEnabled" value="true" />
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="Remote:ruby-1.9.3-p429" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.3.5, Remote:ruby-1.9.3-p429) [gem]" level="application" />
   </component>
 </module>
 
