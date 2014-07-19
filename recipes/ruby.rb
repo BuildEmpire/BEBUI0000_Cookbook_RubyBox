@@ -8,7 +8,9 @@
 if node['cookbook_rubybox']['ruby']['versions'].count == 0
 
   include_recipe "ruby_build::default"
-  ruby_build_ruby node['cookbook_rubybox']['ruby']['global_version']
+  ruby_build_ruby node['cookbook_rubybox']['ruby']['global_version'] do
+    action :install
+  end
 
 else
 

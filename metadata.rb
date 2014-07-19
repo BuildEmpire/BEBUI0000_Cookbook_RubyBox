@@ -5,5 +5,6 @@ version          '0.0.2'
 
 supports 'ubuntu'
 
-depends 'rbenv'
-depends 'ruby_build'
+%w{build-essential rbenv ruby_build}.each do |cb|
+  depends cb
+end
