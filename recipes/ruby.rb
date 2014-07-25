@@ -5,7 +5,7 @@
 # Install and setup Ruby environment
 #
 
-if node['cookbook_rubybox']['ruby']['versions'].count == 0
+if node['cookbook_rubybox']['ruby']['versions'].count == 0 and node['cookbook_rubybox']['ruby']['use_rvm'] == false
 
   include_recipe "ruby_build::default"
   ruby_build_ruby node['cookbook_rubybox']['ruby']['global_version'] do
