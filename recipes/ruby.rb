@@ -5,11 +5,18 @@
 # Install and setup Ruby environment
 #
 
-if node['cookbook_rubybox']['ruby']['versions'].count == 0 and node['cookbook_rubybox']['ruby']['use_rvm'] == false
+if node['cookbook_rubybox']['ruby']['use_rvm'] == false
 
   include_recipe "ruby_build::default"
   ruby_build_ruby node['cookbook_rubybox']['ruby']['global_version'] do
     action :install
+  end
+
+  # Install the gems required
+  Array(node['cookbook_rubybox']['gems']).each_with_index do |package_name, index|
+    gem_package package_name do
+      action :install
+    end
   end
 
 else
@@ -24,6 +31,13 @@ else
     end
     rbenv_gem 'bundler' do
       ruby_version rb_version
+    end
+
+    # Install the gems required
+    Array(node['cookbook_rubybox']['gems']).each_with_index do |package_name, index|
+      rbenv_gem package_name do
+        ruby_version rb_version
+      end
     end
 
   end
