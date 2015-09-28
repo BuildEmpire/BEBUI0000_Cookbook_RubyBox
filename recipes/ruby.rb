@@ -9,6 +9,7 @@ if node['cookbook_rubybox']['ruby']['use_rvm'] == false
 
   include_recipe "ruby_build::default"
   ruby_build_ruby node['cookbook_rubybox']['ruby']['global_version'] do
+    prefix_path '/usr/local'
     action :install
   end
 
